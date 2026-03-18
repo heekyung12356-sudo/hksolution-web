@@ -155,10 +155,7 @@ export default function Home() {
                 Our approach combines AI-powered automated scanning with manual expert testing, delivering results in 48 hours instead of weeks.
               </p>
               <div className="mt-8 flex items-center gap-4">
-                {/* Profile photo placeholder */}
-                <div className="w-14 h-14 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-lg">
-                  HK
-                </div>
+                <img src="/founder.png" alt="HeeKyung Kim" className="w-14 h-14 rounded-full object-cover border-2 border-[var(--primary)]/20" />
                 <div>
                   <div className="font-semibold text-[var(--navy)]">HeeKyung Kim</div>
                   <div className="text-sm text-slate-500">Founder & Lead Security Auditor</div>
@@ -180,7 +177,7 @@ export default function Home() {
             {/* Google Map */}
             <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.123!2d127.4196!3d36.3685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDIyJzA2LjYiTiAxMjfCsDI1JzEwLjYiRQ!5e0!3m2!1sen!2skr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.5!2d127.41960!3d36.36850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565301b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2z64yA7KCE7Iuc64yA642V6rWs67mE656Y7ISc66GcNTM!5e0!3m2!1sko!2skr!4v1710000000000"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
