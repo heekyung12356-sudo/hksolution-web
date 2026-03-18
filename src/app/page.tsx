@@ -52,11 +52,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-100 z-50">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">HK</span>
-            </div>
-            <span className="font-semibold text-[var(--navy)] text-lg">HK Solution</span>
+          <Link href="/" className="flex items-center">
+            <img src="/logo.svg" alt="HK Solution" className="h-8" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             {NAV.map(n => (
@@ -244,10 +241,7 @@ export default function Home() {
       <footer className="py-8 px-6 border-t border-slate-100">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[var(--primary)] rounded flex items-center justify-center">
-              <span className="text-white font-bold text-[10px]">HK</span>
-            </div>
-            <span className="text-sm text-slate-500">HK Solution (HK Solution)</span>
+            <img src="/logo.svg" alt="HK Solution" className="h-5" />
           </div>
           <div className="text-xs text-slate-400 text-center md:text-right">
             <div>CEO: HeeKyung Kim &middot; Business No: 740-05-03702</div>
