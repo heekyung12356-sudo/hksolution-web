@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getDict, locales, type Locale } from '@/i18n';
+import MobileMenu from '@/components/MobileMenu';
 
 const PARTNERS = [
   { name: 'SecureFirst', desc: 'AI-Powered Security Audit Platform', url: 'https://securefirst.dev' },
@@ -39,6 +40,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <a href="#contact" className="hidden md:inline-flex px-4 py-2 bg-[var(--primary)] text-white text-sm font-semibold rounded hover:bg-[var(--primary-dark)] transition-colors">
             {t.nav.cta}
           </a>
+          <MobileMenu locale={locale} nav={t.nav} />
         </div>
       </nav>
 

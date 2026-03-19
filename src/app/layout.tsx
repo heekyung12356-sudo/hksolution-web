@@ -8,11 +8,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HK Solution — Security Engineering & Consulting",
-  description: "We build secure products and break insecure ones. AI-powered security audits, penetration testing, and consulting.",
+  title: "HK Solution — Security · Intelligence · Engineering",
+  description: "Security audits, tech due diligence, competitive intelligence, and product engineering. Any SaaS product, full blueprint in 48 hours.",
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: "HK Solution",
-    description: "Security Engineering & Consulting",
+    description: "Security · Intelligence · Engineering",
     type: "website",
   },
 };
