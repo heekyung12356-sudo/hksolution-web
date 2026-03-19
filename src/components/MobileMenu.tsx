@@ -29,7 +29,7 @@ export default function MobileMenu({ locale, nav }: Props) {
 
       {/* Mobile Menu Overlay */}
       {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-white z-40 px-6 py-8 flex flex-col gap-6">
+        <div className="md:hidden fixed inset-0 top-16 bg-white z-[9999] px-6 py-8 flex flex-col gap-6 overflow-y-auto">
           <a href="#services" onClick={() => setOpen(false)} className="text-lg font-semibold text-[var(--navy)] hover:text-[var(--primary)]">{nav.services}</a>
           <a href="#about" onClick={() => setOpen(false)} className="text-lg font-semibold text-[var(--navy)] hover:text-[var(--primary)]">{nav.about}</a>
           <a href="#partners" onClick={() => setOpen(false)} className="text-lg font-semibold text-[var(--navy)] hover:text-[var(--primary)]">{nav.partners}</a>
