@@ -3,11 +3,23 @@ import { getDict, locales, type Locale } from '@/i18n';
 import MobileMenu from '@/components/MobileMenu';
 import ScrollToTop from '@/components/ScrollToTop';
 
-const PARTNERS = [
-  { name: 'SecureFirst', desc: 'AI-Powered Security Audit Platform', url: 'https://securefirst.dev' },
-  { name: 'Cloudflare', desc: 'CDN, DNS, WAF, DDoS Protection', url: 'https://cloudflare.com' },
-  { name: 'Vercel', desc: 'Deployment & Edge Infrastructure', url: 'https://vercel.com' },
-  { name: 'Supabase', desc: 'Database, Auth, Realtime', url: 'https://supabase.com' },
+const TECH_STACK = [
+  { name: 'React', desc: 'Frontend Framework' },
+  { name: 'Next.js', desc: 'Full-Stack React Framework' },
+  { name: 'TypeScript', desc: 'Type-Safe JavaScript' },
+  { name: 'Node.js', desc: 'Server Runtime' },
+  { name: 'PostgreSQL', desc: 'Relational Database' },
+  { name: 'Supabase', desc: 'Database, Auth, Realtime' },
+  { name: 'Redis', desc: 'In-Memory Cache & Queue' },
+  { name: 'WebSocket', desc: 'Real-Time Communication' },
+  { name: 'WebRTC', desc: 'Video Conferencing (SFU)' },
+  { name: 'Electron', desc: 'Desktop Applications' },
+  { name: 'Three.js', desc: '3D Graphics & WebGL' },
+  { name: 'Tailwind', desc: 'Utility-First CSS' },
+  { name: 'OpenAI', desc: 'GPT-4o / AI Agents' },
+  { name: 'Vercel', desc: 'Deployment & Edge' },
+  { name: 'Cloudflare', desc: 'CDN, DNS, WAF, DDoS' },
+  { name: 'Docker', desc: 'Containerization' },
 ];
 
 const LOCALE_LABELS: Record<Locale, string> = { ko: 'KR', en: 'EN', ja: 'JP' };
@@ -186,15 +198,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <span className="text-[var(--primary)] text-xs font-semibold tracking-wider uppercase">{t.partners.label}</span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--navy)]">{t.partners.title}</h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {PARTNERS.map(p => (
-              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="p-6 bg-white rounded-lg border border-slate-100 hover:border-[var(--primary)]/20 hover:shadow-md transition-all text-center group">
-                <div className="w-12 h-12 mx-auto bg-[var(--primary)]/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[var(--primary)]/10 transition-colors">
-                  <span className="text-[var(--primary)] font-bold text-lg">{p.name[0]}</span>
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
+            {TECH_STACK.map(p => (
+              <div key={p.name} className="p-3 bg-white rounded-lg border border-slate-100 hover:border-[var(--primary)]/20 hover:shadow-sm transition-all text-center group">
+                <div className="w-10 h-10 mx-auto bg-[var(--primary)]/5 rounded-lg flex items-center justify-center mb-2 group-hover:bg-[var(--primary)]/10 transition-colors">
+                  <span className="text-[var(--primary)] font-bold text-sm">{p.name.slice(0, 2)}</span>
                 </div>
-                <div className="font-semibold text-[var(--navy)] group-hover:text-[var(--primary)] transition-colors">{p.name}</div>
-                <div className="text-slate-400 text-xs mt-1">{p.desc}</div>
-              </a>
+                <div className="font-semibold text-[var(--navy)] text-xs group-hover:text-[var(--primary)] transition-colors">{p.name}</div>
+                <div className="text-slate-400 text-[10px] mt-0.5">{p.desc}</div>
+              </div>
             ))}
           </div>
         </div>

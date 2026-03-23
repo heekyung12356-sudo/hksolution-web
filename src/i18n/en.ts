@@ -5,7 +5,7 @@ export const en: Dict = {
   nav: {
     services: 'Services',
     about: 'About',
-    partners: 'Partners',
+    partners: 'Tech Stack',
     contact: 'Contact',
     cta: 'Get in Touch',
   },
@@ -162,8 +162,8 @@ export const en: Dict = {
     founderTitle: 'Founder & Lead Security Auditor',
   },
   partners: {
-    label: 'Partners & Technology',
-    title: 'Built on proven infrastructure',
+    label: 'Technology Stack',
+    title: 'What we build with',
   },
   cta: {
     title: 'Know before your competitors do.',

@@ -5,7 +5,7 @@ export const ja: Dict = {
   nav: {
     services: 'サービス',
     about: '会社概要',
-    partners: 'パートナー',
+    partners: '技術スタック',
     contact: 'お問い合わせ',
     cta: 'お問い合わせ',
   },
@@ -162,8 +162,8 @@ export const ja: Dict = {
     founderTitle: 'Founder & Lead Security Auditor',
   },
   partners: {
-    label: 'Partners & Technology',
-    title: '実績あるインフラの上に構築します',
+    label: '技術スタック',
+    title: '使用している技術',
   },
   cta: {
     title: '競合より先に把握してください。',

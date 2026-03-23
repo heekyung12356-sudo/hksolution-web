@@ -3,7 +3,7 @@ export const ko = {
   nav: {
     services: '서비스',
     about: '소개',
-    partners: '파트너',
+    partners: '기술 스택',
     contact: '문의',
     cta: '문의하기',
   },
@@ -160,8 +160,8 @@ export const ko = {
     founderTitle: 'Founder & Lead Security Auditor',
   },
   partners: {
-    label: 'Partners & Technology',
-    title: '검증된 인프라 위에서 구축합니다',
+    label: '기술 스택',
+    title: '우리가 사용하는 기술',
   },
   cta: {
     title: '경쟁사보다 먼저 파악하세요.',
