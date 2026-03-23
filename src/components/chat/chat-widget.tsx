@@ -29,6 +29,7 @@ const API_BASE = 'https://securefirst.dev';
 
 function getSessionId(): string {
   if (typeof window === 'undefined') return '';
+  localStorage.removeItem('hk_chat_session');
   let id = sessionStorage.getItem('hk_chat_session');
   if (!id) {
     id = crypto.randomUUID();

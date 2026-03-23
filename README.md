@@ -1,3 +1,16 @@
+# ⚠️ 이 폴더는 hksolution.dev 입니다 (securefirst.dev 아님!)
+
+```
+폴더명: C:\projects\core\hksolution-web
+도메인: hksolution.dev  ← 이거!
+
+⚠️ securefirst.dev는 C:\projects\core\hksolution 입니다!
+```
+
+## HK Solution — 회사 공식 웹사이트
+
+한국어 랜딩 페이지 + 서비스 소개
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

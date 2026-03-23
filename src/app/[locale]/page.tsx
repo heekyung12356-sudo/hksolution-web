@@ -234,7 +234,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="text-xs text-slate-400 text-center md:text-right">
             <div>{t.footer.ceo} &middot; {t.footer.bizNo}</div>
             <div className="mt-1">{t.footer.address} &middot; {t.footer.phone}</div>
-            <div className="mt-1">{t.footer.rights}</div>
+            <div className="mt-1">{t.footer.rights} &middot; <a href="/privacy" className="hover:text-[var(--primary)] transition-colors">Privacy Policy</a></div>
           </div>
         </div>
       </footer>
