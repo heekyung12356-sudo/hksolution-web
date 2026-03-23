@@ -203,15 +203,18 @@ export default async function OfferPage({ params }: { params: Promise<{ locale: 
                 <div className="text-sm text-slate-300 mb-1 font-semibold">{t.audit.standaloneTitle}</div>
                 <div className="text-xs text-slate-500 mb-4">{t.audit.standaloneSubtitle}</div>
                 <div className="space-y-3">
-                  {t.audit.tiers.map((tier, i) => (
-                    <div key={tier.name} className={`flex justify-between items-center p-3.5 bg-white/5 rounded-lg ${i === 2 ? 'border border-[var(--primary)]/30' : 'border border-white/5'}`}>
+                  {t.audit.tiers.map((tier, i) => {
+                    const href = i === 0 ? 'https://securefirst.dev/en#contact' : i === 1 ? 'https://securefirst.dev/checkout?plan=startup' : 'https://securefirst.dev/checkout?plan=standard';
+                    return (
+                    <a key={tier.name} href={href} className={`flex justify-between items-center p-3.5 bg-white/5 rounded-lg hover:bg-white/10 transition-colors ${i === 2 ? 'border border-[var(--primary)]/30' : 'border border-white/5'}`}>
                       <div>
                         <span className="text-white text-sm font-medium">{tier.name}</span>
                         <span className="text-slate-500 text-xs block">{tier.desc}</span>
                       </div>
                       <span className={`font-bold text-sm ${i === 0 ? 'text-emerald-400' : 'text-white'}`}>{tier.price}</span>
-                    </div>
-                  ))}
+                    </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -276,10 +279,10 @@ export default async function OfferPage({ params }: { params: Promise<{ locale: 
           <p className="mt-4 text-slate-300 text-lg leading-relaxed whitespace-pre-line">{t.cta.desc}</p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="https://securefirst.dev/en#contact" className="px-8 py-3.5 bg-[var(--primary)] text-white font-semibold rounded-lg hover:bg-[var(--primary-light)] transition-colors text-sm shadow-lg shadow-[var(--primary)]/25">
+            <a href="https://securefirst.dev/checkout?plan=startup" className="px-8 py-3.5 bg-[var(--primary)] text-white font-semibold rounded-lg hover:bg-[var(--primary-light)] transition-colors text-sm shadow-lg shadow-[var(--primary)]/25">
               {t.cta.ctaProject}
             </a>
-            <a href="https://securefirst.dev" className="px-8 py-3.5 bg-emerald-500/20 text-emerald-400 font-semibold rounded-lg border border-emerald-500/30 hover:bg-emerald-500/30 transition-colors text-sm">
+            <a href="https://securefirst.dev/en#contact" className="px-8 py-3.5 bg-emerald-500/20 text-emerald-400 font-semibold rounded-lg border border-emerald-500/30 hover:bg-emerald-500/30 transition-colors text-sm">
               {t.cta.ctaScan}
             </a>
             <a href="mailto:contact@securefirst.dev" className="px-8 py-3.5 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-colors text-sm">
