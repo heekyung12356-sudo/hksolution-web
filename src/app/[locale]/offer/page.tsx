@@ -302,6 +302,25 @@ export default async function OfferPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
+      {/* Fixed Bottom CTA Bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--navy)]/95 backdrop-blur-md border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+          <p className="text-white/70 text-sm hidden sm:block">
+            {locale === 'ko'
+              ? '보안 분석 무료 포함 — 모든 서비스에 적용됩니다.'
+              : 'Free security analysis included with every service.'}
+          </p>
+          <div className="flex items-center gap-3 ml-auto">
+            <a href="https://securefirst.dev/en#contact" className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">
+              {locale === 'ko' ? '문의하기' : 'Contact'}
+            </a>
+            <a href={`https://securefirst.dev/checkout?plan=startup&lang=${locale}`} className="px-5 py-2 bg-[var(--primary)] text-white text-sm font-semibold rounded hover:bg-[var(--primary-light)] transition-colors">
+              {locale === 'ko' ? '시작하기' : 'Get Started'}
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-slate-100">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
