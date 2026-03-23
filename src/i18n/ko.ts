@@ -129,19 +129,74 @@ export const ko = {
         ],
       },
       {
-        category: 'Product Engineering',
-        tagline: '설계도가 있으면, 구현은 빠릅니다.',
+        category: '제품 개발',
+        tagline: '설계도에서 프로덕션까지 — 빠르게.',
         items: [
           {
-            icon: '13', title: 'Rapid Product Design',
+            icon: '13', title: '풀스택 MVP 개발',
+            hook: '48시간 프로토타입. 1-2주 프로덕션.',
+            desc: 'React, Next.js, Node.js, PostgreSQL — 와이어프레임이 아니라 동작하는 제품을 만듭니다. 60개+ SaaS 아키텍처 역분석 완료.',
+            isNew: true,
+          },
+          {
+            icon: '14', title: '급속 제품 설계',
             hook: '"X 같은 제품 만들어주세요" — 48시간에 완전한 설계도.',
             desc: '원하는 제품의 전체 설계 문서를 48시간에 제공합니다. API 스키마, 데이터 모델, 프로토콜, UI 스펙 포함.',
             isNew: true,
           },
+        ],
+      },
+      {
+        category: 'AI & 자동화',
+        tagline: '수작업을 지능형 에이전트로 대체합니다.',
+        items: [
           {
-            icon: '14', title: 'AI & Automation',
-            hook: '40시간의 수작업을 하나의 명령으로 대체합니다.',
-            desc: '브라우저 자동화, AI 에이전트, 워크플로우 최적화. 반복 업무를 자동화해서 팀이 진짜 중요한 일에 집중하게 만듭니다.',
+            icon: '15', title: 'AI 에이전트 개발',
+            hook: '새벽 3시에도 고객이 답변을 받습니다.',
+            desc: '맞춤형 AI 챗봇, 세일즈 에이전트, 서포트 봇. 웹, 텔레그램, 이메일 — GPT-4o 기반 멀티채널 배포.',
+            isNew: true,
+          },
+          {
+            icon: '16', title: '브라우저 & 데스크톱 자동화',
+            hook: '386개 도구. 사람이 클릭할 수 있으면 자동화합니다.',
+            desc: '186개 브라우저 + 200개 데스크톱 자동화 도구. 데이터 수집, 워크플로우, 앱 제어 — Windows, Android, iOS, Electron.',
+            isNew: true,
+          },
+        ],
+      },
+      {
+        category: 'E2E 테스트 & QA',
+        tagline: '모든 버튼. 모든 플로우. 모든 엣지 케이스.',
+        items: [
+          {
+            icon: '17', title: '7계층 E2E 전수 테스트',
+            hook: '"제 PC에서는 되는데요"는 테스트 결과가 아닙니다.',
+            desc: 'UI + 예상 결과 검증 + CRUD 라이프사이클 + 유령 데이터 탐지 + API~DB 관통 검증 + 권한별 분기 + 성능. 빈틈 제로.',
+            isNew: true,
+          },
+          {
+            icon: '18', title: '자동화 회귀 테스트',
+            hook: '유저보다 먼저 버그를 잡습니다.',
+            desc: 'CI/CD 연동 테스트 스위트. 모든 배포 자동 검증. 삭제 플로우, 권한 엣지, 데이터 잔류까지 — 남들이 건너뛰는 것을 테스트합니다.',
+            isNew: true,
+          },
+        ],
+      },
+      {
+        category: '세일즈 & 아웃바운드',
+        tagline: '스팸 폴더가 아닌 받은편지함에 도착하는 콜드 이메일.',
+        items: [
+          {
+            icon: '19', title: '콜드 이메일 인프라',
+            hook: '답장이 안 오는 이유? 이메일이 도착조차 안 합니다.',
+            desc: '도메인 웜업, 전달률 최적화, 시퀀스 설계. Apollo, Instantly, Lemlist, Clay, Reply.io, respond.io 6개 플랫폼 교차 분석 기반.',
+            isNew: true,
+          },
+          {
+            icon: '20', title: 'AI 세일즈 에이전트',
+            hook: '이의처리 완료. 미팅 예약 완료. 자동으로.',
+            desc: 'AI 기반 이의처리, 팔로업, 미팅 스케줄링. 당신의 톤을 학습하고 CRM과 연동됩니다.',
+            isNew: true,
           },
         ],
       },

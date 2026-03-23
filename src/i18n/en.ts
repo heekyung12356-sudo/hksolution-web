@@ -132,18 +132,73 @@ export const en: Dict = {
       },
       {
         category: 'Product Engineering',
-        tagline: 'With the blueprint, implementation is fast.',
+        tagline: 'From blueprint to production — fast.',
         items: [
           {
-            icon: '13', title: 'Rapid Product Design',
+            icon: '13', title: 'Full-Stack MVP Build',
+            hook: 'Prototype in 48h. Production in 1-2 weeks.',
+            desc: 'React, Next.js, Node.js, PostgreSQL — we ship working products, not wireframes. 60+ SaaS architectures already reverse-engineered.',
+            isNew: true,
+          },
+          {
+            icon: '14', title: 'Rapid Product Design',
             hook: '"Build X but for Y" — complete blueprints in 48 hours.',
             desc: 'Full product design documents in 48 hours. API schemas, data models, protocols, and UI specs included.',
             isNew: true,
           },
+        ],
+      },
+      {
+        category: 'AI & Automation',
+        tagline: 'Replace manual work with intelligent agents.',
+        items: [
           {
-            icon: '14', title: 'AI & Automation',
-            hook: 'Replace 40 hours of manual work with one command.',
-            desc: 'Browser automation, AI agents, workflow optimization. Automate repetitive tasks so your team focuses on what matters.',
+            icon: '15', title: 'AI Agent Development',
+            hook: 'Your customers get answers at 3am. You sleep.',
+            desc: 'Custom AI chatbots, sales agents, support bots. Multi-channel: web, Telegram, email. Powered by GPT-4o with function calling.',
+            isNew: true,
+          },
+          {
+            icon: '16', title: 'Browser & Desktop Automation',
+            hook: '386 tools. If a human can click it, we automate it.',
+            desc: '186 browser + 200 desktop automation tools. Data collection, workflow automation, app control — Windows, Android, iOS, Electron.',
+            isNew: true,
+          },
+        ],
+      },
+      {
+        category: 'E2E Testing & QA',
+        tagline: 'Every button. Every flow. Every edge case.',
+        items: [
+          {
+            icon: '17', title: '7-Layer E2E Testing',
+            hook: '"It works on my machine" is not a test result.',
+            desc: 'UI + expected result verification + CRUD lifecycle + ghost data detection + API-to-DB validation + role-based auth + performance. Zero gaps.',
+            isNew: true,
+          },
+          {
+            icon: '18', title: 'Automated Regression Suite',
+            hook: 'Catch bugs before your users do.',
+            desc: 'CI/CD-integrated test suites. Every deploy verified automatically. We test what others skip — delete flows, permission edges, data residue.',
+            isNew: true,
+          },
+        ],
+      },
+      {
+        category: 'Sales & Outbound',
+        tagline: 'Cold emails that land in inboxes, not spam folders.',
+        items: [
+          {
+            icon: '19', title: 'Cold Email Infrastructure',
+            hook: 'No replies? Your emails aren\'t even arriving.',
+            desc: 'Domain warmup, deliverability optimization, sequence design. Cross-analyzed from Apollo, Instantly, Lemlist, Clay, Reply.io, respond.io.',
+            isNew: true,
+          },
+          {
+            icon: '20', title: 'AI Sales Agent',
+            hook: 'Objections handled. Meetings booked. Automatically.',
+            desc: 'AI-powered objection handling, follow-ups, meeting scheduling. Learns your tone. Integrates with your CRM.',
+            isNew: true,
           },
         ],
       },
