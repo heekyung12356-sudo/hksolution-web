@@ -19,7 +19,7 @@ export const ja: Dict = {
     ctaSecondary: 'サービスを見る',
   },
   stats: [
-    { value: '17+', label: '分析完了したプロダクション・アプリ' },
+    { value: '60+', label: '分析完了したプロダクション・アプリ' },
     { value: '48h', label: 'URLから完全な設計図まで' },
     { value: '13K+', label: '単一プロジェクトでデコードしたプロトコル' },
     { value: '10x', label: '従来のコンサルティングより高速' },

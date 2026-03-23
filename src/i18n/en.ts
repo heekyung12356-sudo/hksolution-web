@@ -19,7 +19,7 @@ export const en: Dict = {
     ctaSecondary: 'What We Do',
   },
   stats: [
-    { value: '17+', label: 'Production Apps Analyzed' },
+    { value: '60+', label: 'Production Apps Analyzed' },
     { value: '48h', label: 'From URL to Full Blueprint' },
     { value: '13K+', label: 'Protocol Messages Decoded (Single Project)' },
     { value: '10x', label: 'Faster Than Traditional Consulting' },
@@ -207,7 +207,7 @@ export const en: Dict = {
   about: {
     label: 'ABOUT',
     title: 'Any product. 48 hours.\nFully understood.',
-    p1: 'Founder HeeKyung Kim has analyzed the full architecture and verified security of 17+ production apps. From FAANG-level products to seed startups —',
+    p1: 'Founder HeeKyung Kim has analyzed the full architecture and verified security of 60+ production apps. From FAANG-level products to seed startups —',
     p1Bold: 'not a single one remained opaque.',
     p2: 'Security audits, tech due diligence, competitive analysis, product design —',
     p2Bold: '1/10 the cost, 1/10 the time',
