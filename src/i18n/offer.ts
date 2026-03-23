@@ -138,7 +138,7 @@ export const offerEn: OfferDict = {
         tagline: 'Every button. Every flow. Every edge case. No exceptions.',
         icon: 'QA', color: 'from-emerald-500 to-teal-600',
         items: [
-          { name: '7-Layer E2E Test', hook: '"It works on my machine" is not a test result.', desc: 'UI interaction + expected result verification + full CRUD lifecycle + ghost data detection + API-to-DB validation + role-based auth + performance. 7 layers, zero gaps.', price: 'From $1,500' },
+          { name: '11-Layer E2E Test', hook: '"It works on my machine" is not a test result.', desc: 'UI + validation + lifecycle + ghost data + infra + auth + security + UX quality + mobile + network resilience + navigation. 11 layers, zero gaps.', price: 'From $1,500' },
           { name: 'Automated Regression Suite', hook: 'Catch bugs before your users write angry tweets.', desc: 'Continuous test suites wired into your CI/CD. Every deploy verified automatically. Sleep better on release nights.', price: 'From $1,000' },
         ],
       },
@@ -306,7 +306,7 @@ export const offerKo: OfferDict = {
         tagline: '모든 버튼. 모든 플로우. 모든 엣지 케이스. 예외 없음.',
         icon: 'QA', color: 'from-emerald-500 to-teal-600',
         items: [
-          { name: '7계층 E2E 전수 테스트', hook: '"제 PC에서는 되는데요"는 테스트 결과가 아닙니다.', desc: 'UI 인터랙션 + 예상 결과 검증 + 전체 CRUD 라이프사이클 + 유령 데이터 탐지 + API~DB 관통 검증 + 권한별 분기 + 성능. 7계층, 빈틈 제로.', price: '$1,500~' },
+          { name: '11계층 E2E 전수 테스트', hook: '"제 PC에서는 되는데요"는 테스트 결과가 아닙니다.', desc: 'UI + 검증 + 라이프사이클 + 유령 데이터 + 인프라 + 권한 + 보안 + UX 품질 + 모바일 + 네트워크 + 내비게이션. 11계층, 빈틈 제로.', price: '$1,500~' },
           { name: '자동화 회귀 테스트 스위트', hook: '유저가 분노 트윗을 쓰기 전에 버그를 잡으세요.', desc: 'CI/CD에 연동된 지속적 테스트 스위트. 모든 배포가 자동으로 검증됩니다. 릴리스 밤에 편히 주무세요.', price: '$1,000~' },
         ],
       },

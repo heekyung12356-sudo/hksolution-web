@@ -169,7 +169,7 @@ export const ko = {
         tagline: '모든 버튼. 모든 플로우. 모든 엣지 케이스.',
         items: [
           {
-            icon: '17', title: '7계층 E2E 전수 테스트',
+            icon: '17', title: '11계층 E2E 전수 테스트',
             hook: '"제 PC에서는 되는데요"는 테스트 결과가 아닙니다.',
             desc: 'UI + 예상 결과 검증 + CRUD 라이프사이클 + 유령 데이터 탐지 + API~DB 관통 검증 + 권한별 분기 + 성능. 빈틈 제로.',
             isNew: true,

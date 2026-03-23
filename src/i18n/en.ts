@@ -171,7 +171,7 @@ export const en: Dict = {
         tagline: 'Every button. Every flow. Every edge case.',
         items: [
           {
-            icon: '17', title: '7-Layer E2E Testing',
+            icon: '17', title: '11-Layer E2E Testing',
             hook: '"It works on my machine" is not a test result.',
             desc: 'UI + expected result verification + CRUD lifecycle + ghost data detection + API-to-DB validation + role-based auth + performance. Zero gaps.',
             isNew: true,
