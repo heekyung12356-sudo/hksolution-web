@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getDict, locales, type Locale } from '@/i18n';
 import MobileMenu from '@/components/MobileMenu';
 import ScrollToTop from '@/components/ScrollToTop';
+import HackerTerminal from '@/components/HackerTerminal';
 
 const TECH_STACK = [
   { name: 'React', desc: 'Frontend Framework' },
@@ -83,14 +84,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 </a>
               </div>
             </div>
-            <div className="hidden md:flex justify-center">
-              <div className="relative">
-                <div className="w-[280px] h-[560px] bg-black rounded-[40px] border-[6px] border-slate-700 shadow-2xl shadow-[var(--primary)]/20 overflow-hidden relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-10" />
-                  <video src="/intro.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" poster="/intro-poster.jpg" />
-                </div>
-                <div className="absolute -inset-8 bg-[var(--primary)]/10 rounded-full blur-3xl -z-10" />
-              </div>
+            <div className="hidden md:block">
+              <HackerTerminal />
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
