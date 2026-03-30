@@ -174,7 +174,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </div>
             <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.5!2d127.41960!3d36.36850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565301b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2z64yA7KCE7Iuc64yA642V6rWs67mE656Y7ISc66GcNTM!5e0!3m2!1sko!2skr!4v1710000000000"
+                src="https://maps.google.com/maps?q=대전광역시+대덕구+비래서로+53&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="HK Solution Office Location"
               />
               <div className="p-4 bg-white">
