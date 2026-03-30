@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Product Engineering Carousel — Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; color: white; font-family: system-ui, sans-serif; padding: 40px; }
+    h1 { text-align: center; margin-bottom: 10px; font-size: 24px; }
+    .info { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+    .carousel-container { display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scroll-snap-type: x mandatory; }
+    .slide-wrapper { flex-shrink: 0; scroll-snap-align: start; width: calc(1080px * 0.28); height: calc(1350px * 0.28); border: 2px solid #333; border-radius: 12px; overflow: hidden; position: relative; }
+    .slide-wrapper iframe { width: 1080px; height: 1350px; border: none; transform: scale(0.28); transform-origin: top left; }
+    .slide-label { text-align: center; margin-top: 10px; font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Product Engineering — Carousel Preview</h1>
+  <p class="info">4 Slides · 1080×1350px (Instagram 4:5)</p>
+  <div class="carousel-container">
+    <div><div class="slide-wrapper"><iframe src="slide1-cover.html" scrolling="no"></iframe></div><div class="slide-label">1/4 — Cover</div></div>
+    <div><div class="slide-wrapper"><iframe src="slide2-mvp.html" scrolling="no"></iframe></div><div class="slide-label">2/4 — MVP Build</div></div>
+    <div><div class="slide-wrapper"><iframe src="slide3-rapid-design.html" scrolling="no"></iframe></div><div class="slide-label">3/4 — Rapid Design</div></div>
+    <div><div class="slide-wrapper"><iframe src="slide4-cta.html" scrolling="no"></iframe></div><div class="slide-label">4/4 — CTA</div></div>
+  </div>
+</body>
+</html>
