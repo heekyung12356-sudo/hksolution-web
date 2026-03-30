@@ -209,23 +209,61 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       {/* CTA */}
       <section id="contact" className="py-20 px-6 bg-[var(--navy)]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">{t.cta.title}</h2>
-          <p className="mt-4 text-slate-300 text-lg">{t.cta.desc}</p>
-          <p className="mt-2 text-slate-400 text-sm">{t.cta.sub}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="#contact" className="px-8 py-3 bg-[var(--primary)] text-white font-semibold rounded hover:bg-[var(--primary-light)] transition-colors text-sm">
-              {t.cta.ctaPrimary}
-            </a>
-            <a href="mailto:hksolution2025@gmail.com" className="px-8 py-3 bg-transparent text-white font-semibold rounded border border-white/20 hover:bg-white/10 transition-colors text-sm">
-              hksolution2025@gmail.com
-            </a>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">{t.cta.title}</h2>
+            <p className="mt-4 text-slate-300 text-lg">{t.cta.desc}</p>
           </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-slate-400">
-            <a href="https://securefirst.dev" className="hover:text-white transition-colors">SecureFirst</a>
-            <a href="https://www.linkedin.com/in/heekyung-kim-4884b63b8/" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://t.me/Securefirstbot" className="hover:text-white transition-colors">Telegram</a>
-            <a href="https://securefirst.dev/en/card" className="hover:text-white transition-colors">Digital Card</a>
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <form action="https://formsubmit.co/hksolution2025@gmail.com" method="POST" className="space-y-4">
+              <input type="hidden" name="_subject" value="HK Solution 문의" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://hksolution.dev/ko#contact" />
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">{locale === 'ko' ? '이름' : locale === 'ja' ? '名前' : 'Name'}</label>
+                <input type="text" name="name" required className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded text-white placeholder:text-slate-500 focus:border-[var(--primary)] focus:outline-none transition-colors" placeholder={locale === 'ko' ? '이름을 입력하세요' : 'Your name'} />
+              </div>
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">{locale === 'ko' ? '이메일' : 'Email'}</label>
+                <input type="email" name="email" required className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded text-white placeholder:text-slate-500 focus:border-[var(--primary)] focus:outline-none transition-colors" placeholder={locale === 'ko' ? '이메일 주소' : 'your@email.com'} />
+              </div>
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">{locale === 'ko' ? '문의 내용' : locale === 'ja' ? 'メッセージ' : 'Message'}</label>
+                <textarea name="message" rows={4} required className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded text-white placeholder:text-slate-500 focus:border-[var(--primary)] focus:outline-none transition-colors resize-none" placeholder={locale === 'ko' ? '프로젝트에 대해 알려주세요' : 'Tell us about your project'} />
+              </div>
+              <button type="submit" className="w-full px-8 py-3 bg-[var(--primary)] text-white font-semibold rounded hover:bg-[var(--primary-light)] transition-colors text-sm">
+                {locale === 'ko' ? '문의 보내기' : locale === 'ja' ? '送信する' : 'Send Message'}
+              </button>
+            </form>
+            {/* Contact Info */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-white font-semibold mb-2">{locale === 'ko' ? '직접 연락하기' : 'Direct Contact'}</h3>
+                <div className="space-y-3 text-slate-400 text-sm">
+                  <a href="mailto:hksolution2025@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" /></svg>
+                    hksolution2025@gmail.com
+                  </a>
+                  <a href="https://t.me/Securefirstbot" className="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A48.276 48.276 0 015.653 20.9a48.227 48.227 0 01-2.203-.371A4.789 4.789 0 013 18.75c0-1.59.776-2.996 1.97-3.862A3.744 3.744 0 013 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
+                    Telegram
+                  </a>
+                  <a href="https://www.linkedin.com/in/heekyung-kim-4884b63b8/" className="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">{locale === 'ko' ? '보안 서비스' : 'Security Services'}</h3>
+                <a href="https://securefirst.dev" className="text-[var(--primary-light)] text-sm hover:underline">securefirst.dev →</a>
+              </div>
+              <div className="p-4 bg-white/5 rounded border border-white/10">
+                <p className="text-white text-sm font-medium">{locale === 'ko' ? '24시간 내 답변' : 'Response within 24h'}</p>
+                <p className="text-slate-400 text-xs mt-1">{locale === 'ko' ? '문의 내용을 확인 후 빠르게 연락드리겠습니다.' : 'We review every inquiry and get back to you quickly.'}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
