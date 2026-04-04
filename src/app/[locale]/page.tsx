@@ -83,6 +83,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   {t.hero.ctaSecondary}
                 </a>
               </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {t.hero.highlights.map((highlight) => (
+                  <span key={highlight} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-slate-200">
+                    {highlight}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="hidden md:block">
               <HackerTerminal />
@@ -99,6 +106,25 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
+      {/* Proof */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <span className="text-[var(--primary)] text-xs font-semibold tracking-wider uppercase">{t.proof.label}</span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--navy)]">{t.proof.title}</h2>
+            <p className="mt-4 text-slate-500 leading-relaxed">{t.proof.desc}</p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {t.proof.items.map((item) => (
+              <div key={item.title} className="p-8 bg-white rounded-lg border border-slate-100 shadow-sm">
+                <h3 className="text-lg font-bold text-[var(--navy)]">{item.title}</h3>
+                <p className="mt-3 text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
       <section id="services" className="py-20 px-6 bg-[var(--surface)]">
         <div className="max-w-6xl mx-auto">
@@ -107,35 +133,69 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--navy)] whitespace-pre-line">{t.services.title}</h2>
             <p className="mt-4 text-slate-500 max-w-2xl mx-auto">{t.services.desc}</p>
           </div>
-          {t.services.categories.map((cat, ci) => (
-            <div key={cat.category} className={ci > 0 ? 'mt-16' : ''}>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-1 h-8 bg-[var(--primary)] rounded-full" />
-                <div>
-                  <h3 className="text-lg font-bold text-[var(--navy)]">{cat.category}</h3>
-                  <p className="text-sm text-slate-500">{cat.tagline}</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {t.services.categories.map((cat) => {
+              const item = cat.items[0];
+              return (
+                <div key={cat.category} className="p-8 bg-white rounded-xl border border-slate-100 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5 transition-all group">
+                  <span className="text-[var(--primary)] text-xs font-bold tracking-wider">{item.icon}</span>
+                  <h3 className="mt-3 text-xl font-bold text-[var(--navy)]">{cat.category}</h3>
+                  <p className="mt-2 text-sm text-slate-500">{cat.tagline}</p>
+                  <h4 className="mt-6 text-2xl font-bold text-[var(--navy)] group-hover:text-[var(--primary)] transition-colors">{item.title}</h4>
+                  <p className="mt-3 text-[var(--navy)] text-sm font-semibold leading-relaxed">{item.hook}</p>
+                  <p className="mt-3 text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  {item.product && item.link && (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-1 text-[var(--primary)] text-sm font-semibold hover:gap-2 transition-all">
+                      {item.product} <span>&rarr;</span>
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-16 rounded-2xl bg-[var(--navy)] px-8 py-10 text-white">
+            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <span className="text-[var(--primary-light)] text-xs font-semibold tracking-wider uppercase">{t.services.securefirst.label}</span>
+                <h3 className="mt-3 text-2xl md:text-3xl font-bold">{t.services.securefirst.title}</h3>
+                <p className="mt-4 text-slate-300 leading-relaxed max-w-2xl">{t.services.securefirst.desc}</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href={t.services.securefirst.href} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[var(--primary)] text-white font-semibold rounded hover:bg-[var(--primary-light)] transition-colors text-sm">
+                    {t.services.securefirst.ctaPrimary}
+                  </a>
+                  <a href="#contact" className="px-6 py-3 bg-white/10 text-white font-semibold rounded border border-white/20 hover:bg-white/20 transition-colors text-sm">
+                    {t.services.securefirst.ctaSecondary}
+                  </a>
                 </div>
               </div>
-              <div className={`grid gap-6 ${cat.items.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
-                {cat.items.map(s => (
-                  <div key={s.title} className="p-8 bg-white rounded-lg border border-slate-100 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5 transition-all group relative">
-                    {'isNew' in s && s.isNew && (
-                      <span className="absolute top-4 right-4 px-2 py-0.5 bg-[var(--primary)]/10 text-[var(--primary)] text-[10px] font-bold rounded-full uppercase tracking-wider">New</span>
-                    )}
-                    <span className="text-[var(--primary)] text-xs font-bold tracking-wider">{s.icon}</span>
-                    <h4 className="mt-3 text-xl font-bold text-[var(--navy)] group-hover:text-[var(--primary)] transition-colors">{s.title}</h4>
-                    <p className="mt-2 text-[var(--navy)] text-sm font-semibold">{s.hook}</p>
-                    <p className="mt-2 text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-                    {'product' in s && s.product && (
-                      <a href={s.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-[var(--primary)] text-sm font-semibold hover:gap-2 transition-all">
-                        Try {s.product} <span>&rarr;</span>
-                      </a>
-                    )}
+              <div className="space-y-3">
+                {t.services.securefirst.points.map((point) => (
+                  <div key={point} className="flex gap-3 rounded-xl bg-white/5 border border-white/10 px-4 py-4">
+                    <div className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[var(--primary-light)]" />
+                    <p className="text-sm text-slate-200 leading-relaxed">{point}</p>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
+          </div>
+
+          <div className="mt-16">
+            <div className="max-w-3xl">
+              <span className="text-[var(--primary)] text-xs font-semibold tracking-wider uppercase">{t.services.special.label}</span>
+              <h3 className="mt-3 text-2xl md:text-3xl font-bold text-[var(--navy)]">{t.services.special.title}</h3>
+              <p className="mt-4 text-slate-500 leading-relaxed">{t.services.special.desc}</p>
+            </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {t.services.special.items.map((item) => (
+                <div key={item.title} className="p-6 bg-white rounded-xl border border-slate-100">
+                  <span className="text-[var(--primary)] text-xs font-bold tracking-wider">{item.icon}</span>
+                  <h4 className="mt-3 text-lg font-bold text-[var(--navy)]">{item.title}</h4>
+                  <p className="mt-3 text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -213,13 +273,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">{t.cta.title}</h2>
             <p className="mt-4 text-slate-300 text-lg">{t.cta.desc}</p>
+            <p className="mt-3 text-slate-400 text-sm">{t.cta.sub}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
             <form action="https://formsubmit.co/hksolution2025@gmail.com" method="POST" className="space-y-4">
               <input type="hidden" name="_subject" value="HK Solution 문의" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://hksolution.dev/ko#contact" />
+              <input type="hidden" name="_next" value={`https://hksolution.dev/${locale}#contact`} />
               <div>
                 <label className="block text-sm text-slate-400 mb-1">{locale === 'ko' ? '이름' : locale === 'ja' ? '名前' : 'Name'}</label>
                 <input type="text" name="name" required className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded text-white placeholder:text-slate-500 focus:border-[var(--primary)] focus:outline-none transition-colors" placeholder={locale === 'ko' ? '이름을 입력하세요' : 'Your name'} />
@@ -239,7 +300,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-white font-semibold mb-2">{locale === 'ko' ? '직접 연락하기' : 'Direct Contact'}</h3>
+                <h3 className="text-white font-semibold mb-2">
+                  {locale === 'ko' ? '직접 연락하기' : locale === 'ja' ? '直接連絡する' : 'Direct Contact'}
+                </h3>
                 <div className="space-y-3 text-slate-400 text-sm">
                   <a href="mailto:hksolution2025@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" /></svg>
@@ -256,12 +319,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 </div>
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-2">{locale === 'ko' ? '보안 서비스' : 'Security Services'}</h3>
+                <h3 className="text-white font-semibold mb-2">
+                  {locale === 'ko' ? '보안 진단 시작점' : locale === 'ja' ? 'セキュリティ診断の入口' : 'Security Entry Offer'}
+                </h3>
                 <a href="https://securefirst.dev" className="text-[var(--primary-light)] text-sm hover:underline">securefirst.dev →</a>
               </div>
               <div className="p-4 bg-white/5 rounded border border-white/10">
-                <p className="text-white text-sm font-medium">{locale === 'ko' ? '24시간 내 답변' : 'Response within 24h'}</p>
-                <p className="text-slate-400 text-xs mt-1">{locale === 'ko' ? '문의 내용을 확인 후 빠르게 연락드리겠습니다.' : 'We review every inquiry and get back to you quickly.'}</p>
+                <p className="text-white text-sm font-medium">
+                  {locale === 'ko' ? '24시간 내 1차 응답' : locale === 'ja' ? '24時間以内に一次回答' : 'Initial response within 24h'}
+                </p>
+                <p className="text-slate-400 text-xs mt-1">
+                  {locale === 'ko'
+                    ? '보안 진단이 우선이면 SecureFirst로, 깊은 기술 프로젝트면 HK Solution으로 바로 안내합니다.'
+                    : locale === 'ja'
+                    ? 'まずはSecureFirstかHK Solutionか、最適な開始点をすぐに案内します。'
+                    : 'We quickly route the request to SecureFirst or HK Solution based on the project.'}
+                </p>
               </div>
             </div>
           </div>
@@ -273,17 +346,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
           <p className="text-white/70 text-sm hidden sm:block">
             {locale === 'ko'
-              ? '보안 분석 무료 포함 — 모든 서비스에 적용됩니다.'
+              ? 'SecureFirst는 빠른 보안 진입, HK Solution은 고난도 기술 프로젝트를 맡습니다.'
               : locale === 'ja'
-              ? '全サービスにセキュリティ分析を無料で含みます。'
-              : 'Free security analysis included with every service.'}
+              ? 'SecureFirstは迅速なセキュリティ入口、HK Solutionは高難度プロジェクトを担当します。'
+              : 'SecureFirst handles fast security entry. HK Solution handles deeper technical projects.'}
           </p>
           <div className="flex items-center gap-3 ml-auto">
             <a href="#contact" className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">
               {locale === 'ko' ? '문의하기' : locale === 'ja' ? 'お問い合わせ' : 'Contact'}
             </a>
             <a href="#contact" className="px-5 py-2 bg-[var(--primary)] text-white text-sm font-semibold rounded hover:bg-[var(--primary-light)] transition-colors">
-              {locale === 'ko' ? '시작하기' : locale === 'ja' ? '今すぐ始める' : 'Get Started'}
+              {locale === 'ko' ? '상담 시작' : locale === 'ja' ? '相談を始める' : 'Start Consultation'}
             </a>
           </div>
         </div>
@@ -300,7 +373,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="text-xs text-slate-400 text-center md:text-right">
             <div>{t.footer.ceo} &middot; {t.footer.bizNo}</div>
             <div className="mt-1">{t.footer.address} &middot; {t.footer.phone}</div>
-            <div className="mt-1">{t.footer.rights} &middot; <a href="/privacy" className="hover:text-[var(--primary)] transition-colors">Privacy Policy</a></div>
+            <div className="mt-1">{t.footer.rights} &middot; <Link href="/privacy" className="hover:text-[var(--primary)] transition-colors">Privacy Policy</Link></div>
           </div>
         </div>
       </footer>

@@ -38,6 +38,18 @@ function getSessionId(): string {
   return id;
 }
 
+function getSavedContactInfo(): { name: string; email: string; category: string } | null {
+  if (typeof window === 'undefined') return null;
+  const saved = localStorage.getItem('hk_contact_info');
+  if (!saved) return null;
+
+  try {
+    return JSON.parse(saved);
+  } catch {
+    return null;
+  }
+}
+
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -47,27 +59,15 @@ export function ChatWidget() {
   const [aiTyping, setAiTyping] = useState(false);
 
   // Onboarding flow
-  const [step, setStep] = useState<'category' | 'name' | 'chat'>('category');
+  const [step, setStep] = useState<'category' | 'name' | 'chat'>(() => (getSavedContactInfo() ? 'chat' : 'category'));
   const [selectedCategory, setSelectedCategory] = useState('');
   const [nameInput, setNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
-  const [contactInfo, setContactInfo] = useState<{ name: string; email: string; category: string } | null>(null);
+  const [contactInfo, setContactInfo] = useState<{ name: string; email: string; category: string } | null>(() => getSavedContactInfo());
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const supabase = useMemo(() => createClient(), []);
-
-  // Load saved state
-  useEffect(() => {
-    const saved = localStorage.getItem('hk_contact_info');
-    if (saved) {
-      try {
-        const info = JSON.parse(saved);
-        setContactInfo(info);
-        setStep('chat');
-      } catch { /* ignore */ }
-    }
-  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

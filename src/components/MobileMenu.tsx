@@ -18,9 +18,6 @@ type Props = {
 export default function MobileMenu({ locale, nav, serviceCategories }: Props) {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -29,7 +26,7 @@ export default function MobileMenu({ locale, nav, serviceCategories }: Props) {
 
   const close = () => { setOpen(false); setServicesOpen(false); };
 
-  const overlay = open && mounted ? createPortal(
+  const overlay = open && typeof document !== 'undefined' ? createPortal(
     <div
       style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 99999, backgroundColor: '#ffffff', display: 'flex', flexDirection: 'column' }}
     >
