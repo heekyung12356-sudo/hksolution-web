@@ -11,8 +11,8 @@ export const ko = {
     badge: 'Tech Diligence · Security · Execution',
     title1: '복잡한 기술 문제를',
     title2: '빠르게 해결하는 전문가 팀',
-    desc: '보안감사, 기술 실사, 경쟁사 분석, 포렌식, MVP 개발까지.',
-    descBold: '중요한 기술 판단과 실행을 한 곳에서 지원합니다.',
+    desc: '투자, 조달, 법무 분쟁, 보안 사고 — 기술이 결정을 좌우하는 순간에.',
+    descBold: '체크리스트가 아닌 실제 증거로 해결합니다.',
     highlights: ['Security Audit', 'Tech Due Diligence', 'Competitive Intelligence', 'Product Execution'],
     ctaPrimary: '프로젝트 상담하기',
     ctaSecondary: '핵심 서비스 보기',
@@ -29,15 +29,15 @@ export const ko = {
     desc: 'HK Solution은 넓은 서비스 목록을 나열하기보다, 기업이 돈과 시간을 걸고 결정해야 하는 순간에 필요한 분석과 실행을 제공합니다.',
     items: [
       {
-        title: 'Decision-grade analysis',
+        title: '의사결정을 위한 분석',
         desc: '보안, 기술 실사, 경쟁사 분석, 포렌식을 경영 의사결정에 바로 연결되는 형태로 정리합니다.',
       },
       {
-        title: 'Fast first answers',
-        desc: '48시간 안에 무엇이 중요한지, 어디까지 파고들어야 하는지 먼저 보여줍니다.',
+        title: '48시간 안에 첫 답변',
+        desc: '무엇이 중요한지, 어디까지 파고들어야 하는지 — 첫 답변을 빠르게 드립니다.',
       },
       {
-        title: 'From diagnosis to execution',
+        title: '진단에서 실행까지',
         desc: '문제를 찾는 데서 끝나지 않고 수정, 재설계, 검증, MVP 실행까지 이어서 맡을 수 있습니다.',
       },
     ],
@@ -156,9 +156,9 @@ export const ko = {
     title: '분석 이후 실행까지 이어가는 기술 스택',
   },
   cta: {
-    title: '보안 감사, 기술 실사, 경쟁사 분석이 필요한 순간이라면',
-    desc: '프로젝트 성격에 맞는 시작점을 빠르게 정리해드립니다.',
-    sub: '보안 진단은 SecureFirst, 고가 기술 판단과 실행은 HK Solution으로 연결합니다.',
+    title: '지금 프로젝트를 논의하고 싶으신가요?',
+    desc: '어떤 문의든 24시간 내에 첫 번째 답변을 드립니다.',
+    sub: '폼 작성이 번거로우시면 Telegram이나 이메일로 바로 연락하셔도 됩니다.',
     ctaPrimary: '프로젝트 상담 요청',
   },
   footer: {

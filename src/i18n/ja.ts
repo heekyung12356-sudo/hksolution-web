@@ -13,8 +13,8 @@ export const ja: Dict = {
     badge: 'Tech Diligence · Security · Execution',
     title1: '複雑な技術課題を',
     title2: '素早く解決する専門チーム',
-    desc: 'セキュリティ監査、技術デューデリジェンス、競合分析、フォレンジック、MVP開発まで。',
-    descBold: '重要な技術判断と実行を一か所で支援します。',
+    desc: '投資、調達、法的紛争、セキュリティ事故 — 技術判断が決定を左右する場面で。',
+    descBold: 'チェックリストではなく、実際の証拠で解決します。',
     highlights: ['Security Audit', 'Tech Due Diligence', 'Competitive Intelligence', 'Product Execution'],
     ctaPrimary: 'プロジェクトを相談する',
     ctaSecondary: '主要サービスを見る',
@@ -31,15 +31,15 @@ export const ja: Dict = {
     desc: 'HK Solutionはサービス一覧を並べるのではなく、企業が重要な判断を下す瞬間に必要な分析と実行を提供します。',
     items: [
       {
-        title: 'Decision-grade analysis',
+        title: '意思決定を支える分析',
         desc: 'セキュリティ、技術実査、競合分析、フォレンジックを経営判断に直結する形で整理します。',
       },
       {
-        title: 'Fast first answers',
-        desc: '48時間以内に何が重要で、どこまで深掘りすべきかを最初に示します。',
+        title: '48時間以内に最初の回答',
+        desc: '何が重要で、どこまで深掘りすべきか — まず素早くお伝えします。',
       },
       {
-        title: 'From diagnosis to execution',
+        title: '診断から実行まで',
         desc: '課題の発見で終わらず、改善、再設計、検証、MVP実行まで継続して支援できます。',
       },
     ],
@@ -158,9 +158,9 @@ export const ja: Dict = {
     title: '分析の後に実行までつなぐ技術スタック',
   },
   cta: {
-    title: 'セキュリティ監査、技術実査、競合分析が必要な場面なら',
-    desc: 'プロジェクトに合った開始地点を素早く整理します。',
-    sub: 'セキュリティの入口はSecureFirstへ、高単価の技術判断と実行はHK Solutionで進めます。',
+    title: 'プロジェクトについてご相談ですか？',
+    desc: 'どんなお問い合わせにも24時間以内にご返答します。',
+    sub: 'フォームより直接連絡をご希望の場合は、TelegramかメールでOKです。',
     ctaPrimary: 'プロジェクト相談を送る',
   },
   footer: {

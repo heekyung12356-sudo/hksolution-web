@@ -13,8 +13,8 @@ export const en: Dict = {
     badge: 'Tech Diligence · Security · Execution',
     title1: 'Complex technical problems.',
     title2: 'Clear analysis and fast execution.',
-    desc: 'Security audits, tech due diligence, competitor analysis, IP forensics, and MVP delivery.',
-    descBold: 'We help companies make high-stakes technical decisions with evidence, not guesswork.',
+    desc: 'Investment, procurement, legal disputes, security incidents — when technical judgment is on the line.',
+    descBold: 'We deliver evidence, not checklists.',
     highlights: ['Security Audit', 'Tech Due Diligence', 'Competitive Intelligence', 'Product Execution'],
     ctaPrimary: 'Discuss a Project',
     ctaSecondary: 'View Core Services',
@@ -158,9 +158,9 @@ export const en: Dict = {
     title: 'The stack we use to take analysis into delivery',
   },
   cta: {
-    title: 'If you need a security audit, tech diligence, or competitor analysis',
-    desc: 'We can quickly identify the right starting point for the project.',
-    sub: 'Security entry offers go through SecureFirst. High-value technical decisions and execution stay with HK Solution.',
+    title: 'Ready to discuss a project?',
+    desc: 'We respond to every inquiry within 24 hours.',
+    sub: 'Prefer a faster path? Reach out directly via Telegram or email.',
     ctaPrimary: 'Request Project Consultation',
   },
   footer: {

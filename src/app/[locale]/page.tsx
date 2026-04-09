@@ -59,8 +59,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-[var(--navy)] via-[#1a2d5a] to-[var(--navy)] overflow-hidden">
-        <div className="max-w-6xl mx-auto">
+      <section className="pt-32 pb-20 px-6 relative overflow-hidden" style={{background:'linear-gradient(135deg,#080c14 0%,#0a1628 45%,#080c14 100%)'}}>
+        {/* Glow orbs */}
+        <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] rounded-full pointer-events-none" style={{background:'radial-gradient(circle,rgba(0,71,171,0.18) 0%,transparent 70%)'}} />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full pointer-events-none" style={{background:'radial-gradient(circle,rgba(0,71,171,0.12) 0%,transparent 70%)'}} />
+        {/* Dot grid */}
+        <div className="absolute inset-0 pointer-events-none opacity-40" style={{backgroundImage:'radial-gradient(circle,rgba(0,87,204,0.25) 1px,transparent 1px)',backgroundSize:'32px 32px'}} />
+        <div className="max-w-6xl mx-auto relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-6">
@@ -300,20 +305,27 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-white font-semibold mb-2">
+                <h3 className="text-white font-semibold mb-3">
                   {locale === 'ko' ? '직접 연락하기' : locale === 'ja' ? '直接連絡する' : 'Direct Contact'}
                 </h3>
-                <div className="space-y-3 text-slate-400 text-sm">
+                {/* Telegram CTA — prominent */}
+                <a href="https://t.me/Securefirstbot" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-3 w-full px-4 py-3 mb-3 rounded-lg font-semibold text-sm text-white transition-all hover:brightness-125"
+                  style={{background:'rgba(0,71,171,0.25)',border:'1px solid rgba(0,71,171,0.5)'}}
+                >
+                  <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                  <span>
+                    {locale === 'ko' ? 'Telegram으로 바로 연락' : locale === 'ja' ? 'Telegramで直接連絡' : 'Message on Telegram'}
+                  </span>
+                  <span className="ml-auto text-xs opacity-60">{locale === 'ko' ? '빠른 응답' : locale === 'ja' ? '素早い返答' : 'Fast reply'}</span>
+                </a>
+                <div className="space-y-2 text-slate-400 text-sm">
                   <a href="mailto:hksolution2025@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" /></svg>
+                    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" /></svg>
                     hksolution2025@gmail.com
                   </a>
-                  <a href="https://t.me/Securefirstbot" className="flex items-center gap-2 hover:text-white transition-colors">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A48.276 48.276 0 015.653 20.9a48.227 48.227 0 01-2.203-.371A4.789 4.789 0 013 18.75c0-1.59.776-2.996 1.97-3.862A3.744 3.744 0 013 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
-                    Telegram
-                  </a>
                   <a href="https://www.linkedin.com/in/heekyung-kim-4884b63b8/" className="flex items-center gap-2 hover:text-white transition-colors">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>
+                    <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     LinkedIn
                   </a>
                 </div>
@@ -346,10 +358,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
           <p className="text-white/70 text-sm hidden sm:block">
             {locale === 'ko'
-              ? 'SecureFirst는 빠른 보안 진입, HK Solution은 고난도 기술 프로젝트를 맡습니다.'
+              ? '보안 감사 · 기술 실사 · 경쟁사 분석 — 24시간 내 첫 답변 보장'
               : locale === 'ja'
-              ? 'SecureFirstは迅速なセキュリティ入口、HK Solutionは高難度プロジェクトを担当します。'
-              : 'SecureFirst handles fast security entry. HK Solution handles deeper technical projects.'}
+              ? 'セキュリティ監査・技術実査・競合分析 — 24時間以内に初回回答'
+              : 'Security audit · Tech diligence · Competitor analysis — First response within 24h'}
           </p>
           <div className="flex items-center gap-3 ml-auto">
             <a href="#contact" className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">

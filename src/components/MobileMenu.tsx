@@ -45,7 +45,7 @@ export default function MobileMenu({ locale, nav, serviceCategories }: Props) {
         {/* Services accordion */}
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
-          style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#15295A', background: 'none', border: 'none', borderBottom: '1px solid #f1f5f9', cursor: 'pointer', textAlign: 'left' }}
+          style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#111111', background: 'none', border: 'none', borderBottom: '1px solid #f1f5f9', cursor: 'pointer', textAlign: 'left' }}
         >
           {nav.services}
           <svg width="16" height="16" fill="none" stroke="#94a3b8" strokeWidth={2} viewBox="0 0 24 24" style={{ transform: servicesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
@@ -56,20 +56,20 @@ export default function MobileMenu({ locale, nav, serviceCategories }: Props) {
           <div style={{ padding: '8px 0 8px 16px', borderBottom: '1px solid #f1f5f9' }}>
             {serviceCategories.map(cat => (
               <a key={cat.category} href="#services" onClick={close} style={{ display: 'block', padding: '10px 0', textDecoration: 'none' }}>
-                <span style={{ fontSize: 14, fontWeight: 500, color: '#15295A' }}>{cat.category}</span>
+                <span style={{ fontSize: 14, fontWeight: 500, color: '#111111' }}>{cat.category}</span>
                 <span style={{ display: 'block', fontSize: 12, color: '#94a3b8', marginTop: 2 }}>{cat.tagline}</span>
               </a>
             ))}
           </div>
         )}
 
-        <a href="#about" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#15295A', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
+        <a href="#about" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#111111', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
           {nav.about}
         </a>
-        <a href="#partners" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#15295A', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
+        <a href="#partners" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#111111', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
           {nav.partners}
         </a>
-        <a href="#contact" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#15295A', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
+        <a href="#contact" onClick={close} style={{ display: 'block', padding: '16px 0', fontSize: 16, fontWeight: 600, color: '#111111', textDecoration: 'none', borderBottom: '1px solid #f1f5f9' }}>
           {nav.contact}
         </a>
       </div>
@@ -78,12 +78,12 @@ export default function MobileMenu({ locale, nav, serviceCategories }: Props) {
       <div style={{ flexShrink: 0, padding: '20px 24px', borderTop: '1px solid #f1f5f9', backgroundColor: '#f8fafc' }}>
         <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
           {locales.map(l => (
-            <Link key={l} href={`/${l}`} style={{ padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 600, textDecoration: 'none', ...(l === locale ? { backgroundColor: '#4143C1', color: '#fff' } : { backgroundColor: '#fff', color: '#64748b', border: '1px solid #e2e8f0' }) }}>
+            <Link key={l} href={`/${l}`} style={{ padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 600, textDecoration: 'none', ...(l === locale ? { backgroundColor: '#0047AB', color: '#fff' } : { backgroundColor: '#fff', color: '#64748b', border: '1px solid #e2e8f0' }) }}>
               {LOCALE_LABELS[l]}
             </Link>
           ))}
         </div>
-        <a href="#contact" onClick={close} style={{ display: 'block', width: '100%', padding: '12px 0', backgroundColor: '#4143C1', color: '#fff', fontWeight: 600, borderRadius: 6, textAlign: 'center', fontSize: 14, textDecoration: 'none' }}>
+        <a href="#contact" onClick={close} style={{ display: 'block', width: '100%', padding: '12px 0', backgroundColor: '#0047AB', color: '#fff', fontWeight: 600, borderRadius: 6, textAlign: 'center', fontSize: 14, textDecoration: 'none' }}>
           {nav.cta}
         </a>
       </div>
