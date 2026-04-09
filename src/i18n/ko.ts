@@ -20,7 +20,7 @@ export const ko = {
   stats: [
     { value: '60+', label: '분석·검증한 프로덕션 제품' },
     { value: '48h', label: '첫 진단과 핵심 리스크 정리' },
-    { value: '4', label: '메인에서 집중하는 핵심 서비스' },
+    { value: '4', label: '핵심 전문 서비스 영역' },
     { value: '10x', label: '기존 컨설팅 대비 빠른 의사결정' },
   ],
   proof: {
@@ -44,8 +44,8 @@ export const ko = {
   },
   services: {
     label: 'CORE SERVICES',
-    title: '메인에서는 4가지 핵심 서비스만 분명하게 보여줍니다.',
-    desc: 'HK Solution은 복잡한 기술 문제를 분석하고 해결하는 상위 브랜드입니다. 보안은 대표 전문영역으로 두고, 고가 프로젝트는 기술 판단과 실행 중심으로 설명합니다.',
+    title: '복잡한 기술 문제, 4가지 핵심 서비스로 해결합니다.',
+    desc: '보안 감사, 기술 실사, 경쟁사 분석, IP 포렌식. 중요한 기술 결정 앞에서 체크리스트가 아닌 증거를 제공합니다.',
     categories: [
       {
         category: 'Security Audit',
@@ -100,8 +100,8 @@ export const ko = {
     ],
     securefirst: {
       label: 'SECUREFIRST',
-      title: '보안 진단은 SecureFirst로 분리했습니다.',
-      desc: '광고와 초기 리드 획득은 SecureFirst가 맡고, 더 큰 보안 프로젝트나 고난도 기술 판단은 HK Solution으로 이어집니다.',
+      title: '빠른 보안 진단은 SecureFirst로 시작하세요.',
+      desc: 'URL 하나만 보내주시면 48시간 안에 외부에서 보이는 취약점을 정리해드립니다. 신용카드도, 영업 콜도 필요 없습니다. 더 깊은 프로젝트는 HK Solution으로 연결됩니다.',
       points: [
         'URL만 보내면 24시간 안에 외부에서 보이는 취약점 핵심 3가지를 정리합니다.',
         '신용카드도, 세일즈 콜도 없이 빠르게 시작할 수 있습니다.',
@@ -113,8 +113,8 @@ export const ko = {
     },
     special: {
       label: 'SPECIAL PROJECTS',
-      title: '필요할 때만 여는 확장 서비스',
-      desc: '모든 것을 전면에 내세우지 않고, 핵심 서비스 이후에 연결되는 실행형 프로젝트만 별도로 소개합니다.',
+      title: '진단 이후, 실행까지 이어갑니다',
+      desc: '분석이 끝난 뒤 수정, 재설계, 제품 개발까지 같은 팀이 연속해서 맡을 수 있습니다. 중간에 프로젝트를 넘기지 않습니다.',
       items: [
         {
           icon: '05',

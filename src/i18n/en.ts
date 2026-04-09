@@ -22,7 +22,7 @@ export const en: Dict = {
   stats: [
     { value: '60+', label: 'Production Products Analyzed' },
     { value: '48h', label: 'First diagnosis and risk summary' },
-    { value: '4', label: 'Core services featured on the main page' },
+    { value: '4', label: 'Core service areas' },
     { value: '10x', label: 'Faster decisions than traditional consulting' },
   ],
   proof: {
@@ -46,8 +46,8 @@ export const en: Dict = {
   },
   services: {
     label: 'CORE SERVICES',
-    title: 'The main page now leads with four clear services.',
-    desc: 'HK Solution is the trust brand for complex technical decisions. Security remains a flagship capability, while larger projects are framed around diligence, evidence, and execution.',
+    title: 'Four services. One team. Analysis to execution.',
+    desc: 'Security audit, tech due diligence, competitor analysis, and IP forensics. Technical evidence for decisions too important to get wrong.',
     categories: [
       {
         category: 'Security Audit',
@@ -102,8 +102,8 @@ export const en: Dict = {
     ],
     securefirst: {
       label: 'SECUREFIRST',
-      title: 'Security entry offers are split into SecureFirst.',
-      desc: 'Paid traffic and top-of-funnel outreach can lead with SecureFirst, while larger security and technical projects move into HK Solution.',
+      title: 'Need a fast security check? Start with SecureFirst.',
+      desc: 'Send a URL and get the top exposed vulnerabilities within 48 hours. No credit card, no sales call. Larger security and technical projects move into HK Solution.',
       points: [
         'Submit a URL and get the top exposed vulnerabilities organized within 24 hours.',
         'No credit card and no sales call needed to start.',
@@ -115,8 +115,8 @@ export const en: Dict = {
     },
     special: {
       label: 'SPECIAL PROJECTS',
-      title: 'Expanded capabilities, shown only where they belong',
-      desc: 'Instead of leading with everything, the main page now frames execution-heavy work as follow-on projects after the core services.',
+      title: 'Diagnosis done. Now let\'s build.',
+      desc: 'After analysis, we can continue into remediation, redesign, and product delivery without handing the project off to another team.',
       items: [
         {
           icon: '05',

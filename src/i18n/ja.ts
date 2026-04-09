@@ -22,7 +22,7 @@ export const ja: Dict = {
   stats: [
     { value: '60+', label: '分析・検証した本番プロダクト' },
     { value: '48h', label: '初期診断と主要リスク整理' },
-    { value: '4', label: 'メインで集中する主要サービス' },
+    { value: '4', label: '専門サービス分野' },
     { value: '10x', label: '従来コンサルより速い意思決定' },
   ],
   proof: {
@@ -46,8 +46,8 @@ export const ja: Dict = {
   },
   services: {
     label: 'CORE SERVICES',
-    title: 'メインでは4つの主要サービスだけを明確に見せます。',
-    desc: 'HK Solutionは複雑な技術課題を分析して解決する上位ブランドです。セキュリティは代表的な専門領域として残し、高単価案件は技術判断と実行を軸に説明します。',
+    title: '複雑な技術課題を、4つの専門サービスで解決します。',
+    desc: 'セキュリティ監査、技術デューデリジェンス、競合分析、IPフォレンジック。重要な技術判断に、チェックリストではなく証拠を提供します。',
     categories: [
       {
         category: 'Security Audit',
@@ -102,8 +102,8 @@ export const ja: Dict = {
     ],
     securefirst: {
       label: 'SECUREFIRST',
-      title: 'セキュリティの入口はSecureFirstに分けました。',
-      desc: '広告や初期リード獲得はSecureFirstが担い、より大きなセキュリティ案件や高度な技術判断はHK Solutionへつなぎます。',
+      title: '素早いセキュリティ診断はSecureFirstで始められます。',
+      desc: 'URLを送るだけで、48時間以内に外部から見える脆弱性を整理します。クレジットカードも営業電話も不要です。より大きなプロジェクトはHK Solutionへつなぎます。',
       points: [
         'URLを送るだけで、24時間以内に外部から見える主要な脆弱性を整理します。',
         'クレジットカードも営業電話も不要で開始できます。',
@@ -115,8 +115,8 @@ export const ja: Dict = {
     },
     special: {
       label: 'SPECIAL PROJECTS',
-      title: '必要なときだけ開く拡張サービス',
-      desc: 'すべてを前面に出すのではなく、主要サービスの後に続く実行型プロジェクトだけを別枠で紹介します。',
+      title: '診断の後、実行まで同じチームが担当します',
+      desc: '分析が終わった後、改善・再設計・プロダクト開発まで継続して支援できます。途中でプロジェクトを引き渡しません。',
       items: [
         {
           icon: '05',
